@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-light-pink: hsl(275, 100%, 97%);
+    --clr-grayish-purple: hsl(292, 16%, 49%);
+    --clr-dark-purple: hsl(292, 42%, 14%);
+}
+
+body {
+    font-size: 16px;
+    min-height: 100vh;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Work Sans", sans-serif;
+    line-height: 1.5;
+    background: url('./assets/images/background-pattern-desktop.svg') no-repeat;
+    background-color: var(--clr-light-pink);
+    background-position: top;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+.container {
+    display: block;
+    padding: 15px 50px;
+    margin: auto;
+    color: hsl(292, 42%, 14%);
+    background-color: white;
+    width: 35%;
+    border-radius: 1rem;
+    box-shadow: 0px 30px 100px -50px black;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    padding-left: 10px;
+}
+
+.header img {
+    width: 3rem;
+}
+
+.FAQ-body {
+    margin-bottom: 10px;
+}
+
+.FAQ-head {
+    border-bottom: 1px solid #ccc;
+}
+
+.dropdown-header {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown-header h4 {
+    font-size: 16px;
+    font-weight: 700;
+    width: 95%;
+}
+
+.faq-icon {
+    border: 0;
+    width: 30px;
+    height: 30px;
+    background: url(./assets/images/icon-plus.svg);
+    background-size: cover;
+    background-color: inherit;
+    cursor: pointer;
+    transition: 0.3s ease;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.dropdown {
+    margin-bottom: 15px;
+    display: none;
+}
+
+.dropdown.open {
+    display: block;
+}
+
+.dropdown.open p {
+    font-size: 16px;
+    opacity: 0.3;
+}
+
+.faq-icon.open {
+    background: url(./assets/images/icon-minus.svg);
+    transition: 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 760px) {
+    body {
+        background: url(./assets/images/background-pattern-mobile.svg) no-repeat;
+        background-size: 100%;
+        min-width: 375px;
+    }
+
+    .header {
+        min-width: 400px;
+        margin: auto;
+    }
+}
